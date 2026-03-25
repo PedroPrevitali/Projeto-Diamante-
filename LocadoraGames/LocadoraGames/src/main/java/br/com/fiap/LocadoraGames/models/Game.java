@@ -1,0 +1,23 @@
+package br.com.fiap.LocadoraGames.models;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.*;
+
+import java.time.LocalDate;
+
+@Data
+@Entity
+public class Game {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String title;
+    private int rating;
+    private String synopsis;
+    private LocalDate releaseDate;
+    private String duration;
+    private String genre;
+    private String ratingPeding; // "Livre", "10+", "12+", "14+", "16+", "18+"
+}
