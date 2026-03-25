@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 public class LocadoraGamesApplication {
 
-    record  HelthStatus(String status, String message) {}
+    record  HealthStatus(String status, String message) {}
 
 	public static void main(String[] args) {
 		SpringApplication.run(LocadoraGamesApplication.class, args);
