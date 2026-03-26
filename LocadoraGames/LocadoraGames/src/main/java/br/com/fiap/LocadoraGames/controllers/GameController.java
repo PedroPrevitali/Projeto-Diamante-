@@ -31,22 +31,21 @@ public class GameController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Game> getJogoById(@PathVariable Long id){
+    public ResponseEntity<Game> getGameById(@PathVariable Long id){
         log.info("Obtendo dados do jogo {}", id);
         return ResponseEntity.ok(service.getGameById(id));
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<Void> deleteJogo(@PathVariable Long id){
+    public ResponseEntity<Void> deleteGame(@PathVariable Long id){
         log.info("Deletando jogo com id {}", id );
         service.deleteGame(id);
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Game> updateJogo(@PathVariable Long id, @RequestBody Game game){
+    public ResponseEntity<Game> updateGame(@PathVariable Long id, @RequestBody Game game){
         log.info("Atualizando o Jogo com id {} com os dados {}", id, game);
         return ResponseEntity.ok( service.updateGame(id, game) );
     }
-
 }
