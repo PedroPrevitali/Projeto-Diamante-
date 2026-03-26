@@ -1,7 +1,7 @@
 package br.com.fiap.LocadoraGames.controllers;
 
 import br.com.fiap.LocadoraGames.models.Cliente;
-import br.com.fiap.LocadoraGames.models.Game;
+
 import br.com.fiap.LocadoraGames.services.ClienteService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
